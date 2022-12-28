@@ -14,23 +14,23 @@ export var newsList = [
   "Decoder: Armenia in a bind as Ukraine war resets global order",
   "What books should an aspiring journalist read?",
   "Marie Colvin shined a light on war-torn corners of the world",
+  "I am a cool web developer" //make this line a comment if not testing
 ];
 
 export function search() {
-  //inputValue is the variable that contains the search string
-  const inputValue = document.getElementById("search-input").value;
-
-  //Write your code here for the search function
-
-  return newsList;
+  //const inputValue = document.getElementById("search-input").value; //make this line a comment if testing
+  const inputValue = "I am a cool web developer" //make this line a comment if not testing
+  const searchResult = newsList.filter(string => string.includes(inputValue))
+  return searchResult;
 }
 
 export function sort(type) {
   if (type == "ascending") {
     //Write your code here for sorting (ascending)
+    newsList.sort()
   } else {
     //Write your code here for sorting (descending)
+    newsList.reverse()
   }
-
   return newsList;
 }
